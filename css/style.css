@@ -1,0 +1,241 @@
+:root {
+  --main-color: #00AF91;
+  --alt-color: #007965;
+  --main-trans-duration: 0.3s;
+  --main-border-radius: 6px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Cairo', sans-serif;
+  color: #222;
+}
+
+.game {
+  background-color: #eee;
+  min-height: 100vh;
+  padding-bottom: 10px;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.name {
+  padding: 20px;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  color: #FFF;
+  background-color: var(--main-color);
+}
+
+.notes {
+  background-color: #FFF;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: var(--main-border-radius);
+  text-align: center;
+}
+
+.notes span {
+  font-weight: bold;
+  color: var(--main-color);
+}
+
+.start {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  background-color: var(--main-color);
+  padding: 20px;
+  color: #FFF;
+  cursor: pointer;
+  transition: var(--main-trans-duration);
+  border-radius: var(--main-border-radius);
+}
+
+.start:hover {
+  background-color: var(--alt-color);
+}
+
+.current-word {
+  text-align: center;
+  font-weight: bold;
+  font-size: 50px;
+  color: var(--main-color);
+  user-select: none;
+}
+
+.input {
+  margin: 15px auto;
+  display: block;
+  padding: 15px;
+  border: 3px solid var(--main-color);
+  font-size: 20px;
+  caret-color: var(--main-color);
+  outline: none;
+  color: var(--main-color);
+  text-transform: capitalize;
+  border-radius: var(--main-border-radius);
+  width: 100%;
+}
+
+.coming-words {
+  background-color: #FFF;
+  margin: 15px 0;
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.coming-words > span {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.coming-words i {
+  position: absolute;
+  transform: translateX(-800px);
+  font-size: 50px;
+  color: var(--main-color);
+  animation: translate-jet 1.5s ease-out forwards;
+}
+
+@keyframes translate-jet {
+  0% {
+    transform: translateX(-800px);
+  }
+
+  100% {
+  transform: translateX(125px);
+  }
+}
+
+
+.coming-words div {
+  background-color: var(--main-color);
+  color: #FFF;
+  font-weight: bold;
+  padding: 5px 15px;
+  border-radius: var(--main-border-radius);
+  margin: 4px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  background-color: #FFF;
+  padding: 15px;
+  border-radius: var(--main-border-radius);
+}
+
+@media (max-width: 767px) {
+  .stats {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.stats div {
+  padding: 5px 10px;
+  background-color: #EEE;
+  border-radius: var(--main-border-radius);
+}
+
+.stats select {
+  padding: 5px 10px;
+  background-color: #EEE;
+  border-radius: var(--main-border-radius);
+  outline: none;
+  border: none;
+}
+
+@media (max-width: 767px) {
+  .stats select {
+  padding: 15px 10px;
+  }
+}
+
+.stats select option {
+  background-color: #EEE;
+  color: #222;
+}
+
+.select-selected {
+  background-color: red;
+}
+
+.stats div span {
+  font-weight: bold;
+  color: var(--main-color);
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  background-color: #FFF;
+  text-align: center;
+  padding: 15px;
+  font-weight: bold;
+  color: var(--main-color);
+}
+
+.message h2 {
+  margin: 10px 0;
+}
+
+.message .roles {
+  text-align: left;
+  margin-left: 15px;
+}
+
+.message .roles span {
+  color: var(--alt-color);
+}
+
+.message .win {
+  font-size: 60px;
+}
+
+.message .lose {
+  font-size: 60px;
+  color: red;
+}

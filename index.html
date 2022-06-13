@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Game</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/icon.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap">
+  </head>
+  <body>
+
+    <div class="game">
+      <div class="name">Typing Speed Game</div>
+      <div class="container">
+        <div class="notes">
+          You Are Playing On <span class="level"></span> Level & You Have <span class="seconds"></span> Seconds To Type The Word
+        </div>
+        <div class="start">Start Playing</div>
+        <div class="current-word"></div>
+        <input type="text" class="input" />
+        <div class="coming-words"></div>
+        <div class="stats">
+          <select name="levels" id="select-box"></select>
+          <div class="time-left">Time Left: <span></span> Seconds</div>
+          <div class="score">
+            Score: <span class="acquired">0</span> From <span class="max"></span>
+          </div>
+        </div>
+        <div class="message">
+          <h2>Instructions</h2>
+          <span class="roles">[1] Write The Word Fast</span>
+          <span class="roles">[2] The Input Is already Focused</span> 
+          <span class="roles">[3] Write immediately</span>
+          <span class="roles">[4] Ignore Cases</span>
+          <span class="roles">[5] First Word Takes The Level Time + 3s</span>
+          <span class="roles">
+            [6] Levels Time :- 
+            <span><br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Very Easy: </span>
+            <span><br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Easy: </span>
+            <span><br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Normal: </span>
+            <span><br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hard: </span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
