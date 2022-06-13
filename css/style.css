@@ -21,7 +21,12 @@ body {
 .game {
   background-color: #eee;
   min-height: 100vh;
-  padding-bottom: 10px;
+}
+
+@media (max-width: 991px) {
+  .game {
+    padding-bottom: 10px;
+  }
 }
 
 .container {
